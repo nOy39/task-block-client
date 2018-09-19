@@ -6,6 +6,7 @@ import Login from '@/components/Login'
 import Registration from '@/components/Registration'
 import Home from '@/components/Home'
 import Add from '@/components/blocks/Add'
+import MyBlocks from '@/components/blocks/MyBlocks'
 
 Vue.use(Router)
 
@@ -21,6 +22,11 @@ export default new Router({
       path: '/home',
       name: 'Home',
       component: Home
+    },
+    {
+      path: '/myblocks',
+      name: 'MyBlocks',
+      component: MyBlocks
     },
     {
       path: '/add',

@@ -134,7 +134,6 @@
         signOut () {
           localStorage.clear()
           this.$store.dispatch('changeAuthorize', false)
-          console.log(localStorage.getItem('user').length)
           this.$router.push('/')
         },
         closeError () {
