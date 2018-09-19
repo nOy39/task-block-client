@@ -89,8 +89,9 @@
           drawer: false,
           fixed: true,
           items: [
-            { icon: 'event', text: 'Главная', url: '/home' },
-            { icon: 'widgets', text: 'Мои блоки', url: '/myblocks' },
+            { icon: 'widgets', text: 'Все задачи', url: '/myblocks' },
+            { icon: 'event', text: 'Задачи на сегодня', url: '/home' },
+            { icon: 'whatshot', text: 'Горяшие дела', url: '/hot' },
             { icon: 'library_add', text: 'Создать новый блок', url: '/add' },
             { divider: true },
             { icon: 'bubble_chart', text: 'Тест', url: '/test' },

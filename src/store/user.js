@@ -44,7 +44,7 @@ export default {
       commit('setTokenJwt', payload.accessToken)
       commit('setTypeJwt', payload.tokenType)
       localStorage.clear()
-      localStorage.setItem('user', payload.tokenType + ' ' + payload.accessToken)
+      localStorage.setItem('user', 'Bearer ' + payload.accessToken)
       commit('setAuthorize', true)
     }
   }

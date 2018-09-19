@@ -23,6 +23,11 @@ export default new Router({
       component: Home
     },
     {
+      path: '/task',
+      name: 'Task',
+      component: Task
+    },
+    {
       path: '/add',
       name: 'Add',
       component: Add

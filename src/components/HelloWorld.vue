@@ -57,9 +57,9 @@
           .catch(e => console.log(e))
       },
       signIn () {
-        AXIOS.get('/auth/user/me', {
+        AXIOS.get('/auth/me', {
           headers: {
-            'Authorization': localStorage.getItem('user')
+            'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNTM3MjY4MTUzLCJleHAiOjE1Mzc4NzI5NTN9.90PRcKbY3nqLjG6LdlQ9OT7Rl8yG4hdLMkE62OWD4Tuw1l_AQdI6_fvyeKIwD_7zdinDpEu6HdbQeYY1qX2GHw'
           }
         })
           .then(response => {
@@ -72,12 +72,13 @@
       meInfo () {
         AXIOS({
           method: 'get',
-          url: '/auth/user/me',
+          url: '/auth/me',
           headers: {
             'Authorization': localStorage.getItem('user')
           }
         }).then(response => {
           console.log(response)
+          console.log(this.$moment().format('LL'))
         }).catch(e => {
           console.log(e.message)
           this.$store.dispatch('createError', e.message)
